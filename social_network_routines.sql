@@ -93,7 +93,7 @@ BEGIN
 	IF COALESCE(`count-only`, 0) = 1 THEN SET `rows` = 2147483647; END IF;
 
 	SET `sort-col` = COALESCE(`sort-col`, 'created_at');
-	SET `sort-dir` = COALESCE(`sort-dir`, 'asc');
+	SET `sort-dir` = COALESCE(`sort-dir`, 'desc');
 
 	IF search IS NOT NULL THEN
 		SET search = CONCAT("%", search, "%");
