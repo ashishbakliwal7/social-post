@@ -1,7 +1,7 @@
 import mysql from "mysql";
 
 const connection = mysql.createConnection({
-  host: "34.93.16.194",
+  host: "34.93.27.54",
   user: "root",
   password: "",
   database: "social_network",

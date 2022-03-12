@@ -26,7 +26,7 @@ const addOne = async (req: Request, res: Response) => {
   ]);
 
   res.send({
-    message: "Post added",
+    message: result,
   });
 };
 
