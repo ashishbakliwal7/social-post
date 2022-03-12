@@ -6,3 +6,4 @@ How to Run <br>
 3] npm start <br>
 
 
+[a relative link](other_file.md)
