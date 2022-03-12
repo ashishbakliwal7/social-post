@@ -1,4 +1,4 @@
-# social-post
+# Social-post
 
 How to Run <br>
 1] Clone the repo <br>
