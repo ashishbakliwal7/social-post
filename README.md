@@ -34,13 +34,6 @@ How to Run <br>
 
 ### Response
 
-    HTTP/1.1 200 OK
-    Date: Thu, 24 Feb 2011 12:36:30 GMT
-    Status: 200 OK
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 2
-    
     "data": [
         {
             "id": 1,
@@ -52,6 +45,103 @@ How to Run <br>
         }
     ]
 
+## Get Post by Id
+### Request
+
+`GET /Post/:id`
+
+    curl -i -H 'Accept: application/json' http://localhost:4000/post/:id  
+     
+
+### Response
+   
+    "data":{
+            "id": 1,
+            "title": "first post",
+            "content": "hello",
+            "created_by": 1,
+            "created_at": "2022-03-12T03:08:54.000Z",
+            "updated_at": "2022-03-12T03:08:54.000Z"
+        }
+
+## Create a new Post
+
+### Request
+
+`POST /post`
+
+    curl --location --request POST 'http://localhost:4000/post' \
+    --header 'Content-Type: application/json' \
+    --data-raw '{
+    "title" : "second post",
+    "content" : "hello"
+    }'
+
+### Response
+
+    {
+    "message": {
+        "fieldCount": 0,
+        "affectedRows": 1,
+        "insertId": 0,
+        "serverStatus": 2,
+        "warningCount": 0,
+        "message": "",
+        "protocol41": true,
+        "changedRows": 0
+        }
+    }
+
+## Update a new Post
+
+### Request
+
+`PUT /post/:id`
+
+    curl --location --request PUT 'http://localhost:4000/post/:id' \
+    --header 'Content-Type: application/json' \
+    --data-raw '{
+    "title" : "second post",
+    "content" : "hello"
+    }'
+
+### Response
+
+    {
+    "message": {
+        "fieldCount": 0,
+        "affectedRows": 1,
+        "insertId": 0,
+        "serverStatus": 2,
+        "warningCount": 0,
+        "message": "",
+        "protocol41": true,
+        "changedRows": 0
+        }
+    }
+
+## Delete a new Post
+
+### Request
+
+`Delete /post/:id`
+
+    curl --location --request DELETE 'http://localhost:4000/post/:id' \
+
+### Response
+
+    {
+    "message": {
+        "fieldCount": 0,
+        "affectedRows": 1,
+        "insertId": 0,
+        "serverStatus": 2,
+        "warningCount": 0,
+        "message": "",
+        "protocol41": true,
+        "changedRows": 0
+        }
+    }
 
 
 
