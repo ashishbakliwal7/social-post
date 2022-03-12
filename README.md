@@ -7,5 +7,5 @@ How to Run <br>
 
 # Database
 
-1] [Table script](https://github.com/ashishbakliwal7/social-post/blob/master/social_network_post.sql)
+1] [Table script](https://github.com/ashishbakliwal7/social-post/blob/master/social_network_post.sql) <br>
 2] [Stored procedures](https://github.com/ashishbakliwal7/social-post/blob/master/social_network_routines.sql)
