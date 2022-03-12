@@ -5,5 +5,6 @@ How to Run <br>
 2] npm i <br>
 3] npm start <br>
 
+# Database
 
-[a relative link](other_file.md)
+[a relative link](https://github.com/ashishbakliwal7/social-post/blob/master/social_network_post.sql)
