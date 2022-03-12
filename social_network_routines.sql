@@ -92,7 +92,7 @@ BEGIN
 	-- if count-only is true make sure to increase the rows to getch to max limit
 	IF COALESCE(`count-only`, 0) = 1 THEN SET `rows` = 2147483647; END IF;
 
-	SET `sort-col` = COALESCE(`sort-col`, 'title');
+	SET `sort-col` = COALESCE(`sort-col`, 'created_at');
 	SET `sort-dir` = COALESCE(`sort-dir`, 'asc');
 
 	IF search IS NOT NULL THEN
@@ -117,8 +117,10 @@ BEGIN
 	AND
 		(search IS NULL OR CONCAT_WS(' ', p.title) like search)
 	ORDER BY
-		CASE WHEN `sort-col` = 'name' AND `sort-dir` = 'asc' THEN title END ASC,
-		CASE WHEN `sort-col` = 'name' AND `sort-dir` = 'desc' THEN title END DESC
+		CASE WHEN `sort-col` = 'title' AND `sort-dir` = 'asc' THEN title END ASC,
+		CASE WHEN `sort-col` = 'title' AND `sort-dir` = 'desc' THEN title END DESC,
+        CASE WHEN `sort-col` = 'created_at' AND `sort-dir` = 'asc' THEN created_at END ASC,
+		CASE WHEN `sort-col` = 'created_at' AND `sort-dir` = 'desc' THEN created_at END DESC
 	LIMIT `offset`, `rows`;
     
 	IF COALESCE(`count-only`, 0) THEN
